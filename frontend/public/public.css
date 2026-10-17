@@ -1,0 +1,89 @@
+.public-site {
+  --surface: #fff;
+  --surface-soft: #fff7f6;
+  background: var(--surface);
+  color: #241d1e;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  min-height: 82px;
+  border-color: rgba(232, 25, 36, .11);
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 0 8px 28px rgba(58, 27, 30, .035);
+  backdrop-filter: blur(16px);
+}
+
+.site-header .brand { flex-basis: 220px; width: 220px; height: 60px; }
+.site-header nav { gap: 8px; }
+.site-header nav a:not(.nav-cta) {
+  border-radius: 999px;
+  padding: 10px 13px;
+  color: #5f5355;
+  font-size: 12px;
+  font-weight: 600;
+  transition: color .18s ease, background .18s ease;
+}
+.site-header nav a:not(.nav-cta):hover,
+.site-header nav a:not(.nav-cta).active { background: #fff1f1; color: #a50f19; }
+.site-header nav a.active::after { display: none; }
+.site-header .nav-cta {
+  border-radius: 999px;
+  padding: 12px 18px;
+  box-shadow: 0 7px 18px rgba(197, 17, 28, .16);
+}
+
+.hero {
+  min-height: min(720px, calc(100vh - 82px));
+  background: radial-gradient(ellipse at 82% 42%, rgba(232, 25, 36, .12), transparent 38%), linear-gradient(135deg, #fffafa, #fff4f3 58%, #fff 100%);
+}
+.hero-copy { max-width: 620px; }
+.hero h1 { font-size: clamp(54px, 7vw, 94px); }
+.hero-intro { max-width: 440px; font-size: 15px; }
+.hero-art { border-radius: 220px 220px 18px 18px; box-shadow: 0 34px 90px rgba(89, 25, 31, .19); }
+.button { border-radius: 10px; }
+.button-dark { box-shadow: 0 10px 22px rgba(193, 16, 29, .16); }
+
+.section-heading { gap: 20px; }
+.portfolio-card, .article-card { overflow: hidden; border: 1px solid #f0e6e5; border-radius: 18px; background: #fff; box-shadow: 0 12px 36px rgba(45, 25, 27, .055); }
+.portfolio-card img, .portfolio-card video { border-radius: 17px 17px 0 0; }
+.portfolio-card > div { padding: 22px 24px 25px; }
+.article-card { padding: 0 0 18px; transition: transform .2s ease, box-shadow .2s ease; }
+.article-card:hover { transform: translateY(-4px); box-shadow: 0 18px 42px rgba(45, 25, 27, .09); }
+.article-art { border-radius: 17px 17px 0 0; }
+.article-date, .article-card h3, .article-excerpt, .article-content { margin-left: 20px; margin-right: 20px; }
+.services-section { background: linear-gradient(135deg, #fff6f5, #fff0ef); }
+.services-page .service-grid article { border-radius: 16px; }
+.about-mark { min-width: 0; border: 1px solid #f4e3e3; border-radius: 24px; }
+.about-mark img { width: min(100%, 360px); max-width: 100%; height: auto; object-fit: contain; }
+.about-page .about-mark { min-height: 300px; padding: 28px; }
+.client-banner { background: radial-gradient(ellipse at 100% 0%, rgba(232, 25, 36, .23), transparent 45%), #21191b; }
+.site-footer { gap: 22px; }
+.footer-brand { position: static; display: flex; flex: 0 1 240px; width: 240px; height: 58px; align-items: center; }
+.footer-brand img { position: static; width: 100%; height: 100%; max-width: 100%; object-fit: contain; }
+
+@media (max-width: 850px) {
+  .site-header { padding-left: 5%; padding-right: 5%; }
+  .site-header .brand { flex-basis: 185px; width: 185px; height: 52px; }
+  .site-header nav { gap: 2px; }
+  .site-header nav a:not(.nav-cta) { padding: 9px 10px; font-size: 11px; }
+  .hero { min-height: 570px; }
+}
+
+@media (max-width: 600px) {
+  .site-header { min-height: 0; padding: 9px 5% 12px; gap: 8px; }
+  .site-header .brand { flex: 0 1 155px; width: 155px; height: 43px; }
+  .site-header nav { display: grid; width: 100%; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; }
+  .site-header nav a:not(.nav-cta) { padding: 9px 3px; text-align: center; font-size: 10px; }
+  .site-header .nav-cta { grid-column: 1 / -1; justify-self: end; padding: 9px 14px; font-size: 10px; }
+  .hero { min-height: 0; padding: 54px 7% 76px; }
+  .hero h1 { font-size: clamp(48px, 13vw, 66px); }
+  .hero-art { align-self: center; border-radius: 180px 180px 15px 15px; }
+  .section-heading { align-items: flex-start; }
+  .section-heading h2 { font-size: 34px; }
+  .about-mark img { width: min(100%, 260px); }
+  .about-page .about-mark { min-height: 210px; }
+  .footer-brand { flex-basis: 155px; width: 155px; height: 43px; }
+}

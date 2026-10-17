@@ -1,0 +1,29 @@
+.studio-site {
+  background: radial-gradient(ellipse at 80% -15%, rgba(232, 25, 36, .07), transparent 40%), #f7f6f6;
+}
+.studio-header { box-shadow: 0 8px 28px rgba(45, 24, 27, .045); }
+.studio-header .brand { flex-basis: 210px; width: 210px; height: 58px; }
+.admin-shell { min-height: calc(100vh - 82px); background: transparent; }
+.admin-card { border-radius: 22px; padding: 42px; box-shadow: 0 24px 70px rgba(45, 24, 27, .1); }
+.dashboard-heading { border: 1px solid #f0e4e4; box-shadow: 0 12px 36px rgba(45, 24, 27, .045); }
+.studio-metrics > div { min-height: 88px; border-radius: 16px; box-shadow: 0 8px 22px rgba(45, 24, 27, .035); }
+.studio-tabs { border: 1px solid #eee4e4; }
+.studio-tabs button { border-radius: 11px; transition: background .18s ease, color .18s ease; }
+.studio-tabs button.selected { color: #a90f1a; }
+.panel { border-radius: 20px; }
+.new-gallery-form { border-radius: 17px; }
+.gallery-search { border-radius: 999px; }
+.project-media-list { gap: 14px; }
+.asset-admin-row { border-radius: 13px; box-shadow: 0 6px 18px rgba(45, 24, 27, .035); }
+.story-admin-row { flex-wrap: wrap; }
+.aside-note, .aside-stats { border-radius: 17px; }
+.success-panel { border-radius: 18px; }
+.dashboard button, .dashboard a, .dashboard input, .dashboard textarea, .admin-shell button, .admin-shell input { transition-duration: .18s; }
+.dashboard :is(input, textarea):focus-visible, .admin-shell :is(input, textarea):focus-visible { outline: 3px solid rgba(232, 25, 36, .22); outline-offset: 2px; }
+
+@media (max-width: 600px) {
+  .studio-header { min-height: 66px; }
+  .studio-header .brand { flex-basis: 155px; width: 155px; height: 43px; }
+  .admin-card { padding: 34px 24px; }
+  .dashboard-heading { border-radius: 20px; }
+}

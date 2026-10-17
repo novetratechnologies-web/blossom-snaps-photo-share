@@ -1,0 +1,12 @@
+.client-site {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% -15%, rgba(232, 25, 36, .075), transparent 45%), #fffafa;
+}
+.client-site main { min-height: 100vh; }
+.client-site .access-shell { min-height: 100vh; background: transparent; }
+.client-site .access-card { border-radius: 26px; box-shadow: 0 28px 90px rgba(65, 25, 30, .12); }
+.client-site .access-card > p:not(.eyebrow) { max-width: 360px; }
+.client-site .gallery-section { min-height: 100vh; }
+.client-site .gallery-item { transition: transform .2s ease, box-shadow .2s ease; }
+.client-site .gallery-item:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(45, 25, 27, .1); }
+.client-site .gallery-item figcaption { min-height: 56px; }
